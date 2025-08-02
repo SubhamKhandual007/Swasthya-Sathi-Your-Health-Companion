@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Cancer Prediction</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Blood Cancer Predictor</h2>
+        <form action="/predict" method="post">
+            <input type="number" step="any" name="radius" placeholder="Radius Mean" required><br>
+            <input type="number" step="any" name="texture" placeholder="Texture Mean" required><br>
+            <input type="number" step="any" name="perimeter" placeholder="Perimeter Mean" required><br>
+            <input type="number" step="any" name="area" placeholder="Area Mean" required><br>
+            <input type="number" step="any" name="smoothness" placeholder="Smoothness Mean" required><br>
+            <button type="submit">Predict</button>
+        </form>
+        {% if result %}
+            <h3>Prediction: {{ result }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
