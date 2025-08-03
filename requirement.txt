@@ -5,3 +5,4 @@ joblib
 Pillow
 reportlab
 matplotlib
+scikit-learn
